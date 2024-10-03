@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from backend.api.views import get_exoplanets, get_star_data
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('exoplanets/', get_exoplanets, name='get_exoplanets'),
+    path('stars/<ra>/<dec>/', get_star_data, name='get_star_data'),
 ]

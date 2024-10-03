@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'spaceapps2024',         # Your PostgreSQL database name
+        'USER': 'postgres',         # Your PostgreSQL username
+        'PASSWORD': 'islamislife786', # Your PostgreSQL password
+        'HOST': 'localhost',           # Usually 'localhost' for local dev
+        'PORT': '5432',                # Default PostgreSQL port
     }
 }
+
+
 
 
 # Password validation
