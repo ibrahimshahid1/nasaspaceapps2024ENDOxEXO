@@ -2,6 +2,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from astroquery.gaia import Gaia
 from .utils import calculate_star_positions_for_exoplanet
+from django.http import JsonResponse
+from .utils import calculate_star_positions_for_exoplanet
+
 
 class StarPositionView(APIView):
     def get(self, request, exoplanet_ra, exoplanet_dec):
